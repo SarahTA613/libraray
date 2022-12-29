@@ -1,0 +1,31 @@
+{% extends 'home.html' %}
+
+
+{% block content %}
+  
+
+<div class="container">
+
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+            <a href="{% url 'showBooks' %}" class="btn btn-primary mt-2">Back</a>
+          <div class="card m-5 p-2" style="width: 25rem;">
+              <img src="{{ eachBook.image.url }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title m-1"><b>Tilte:</b> {{ eachBook.title }}</h5>
+                  <h4 class="card-subtitle m-1"><b>Author:</b> {{ eachBook.author}}</h4>
+                  <p style="font-size: 14px;" class="btn btn-warning m-1 p-1">{{ eachBook.category.name }}</p>
+                  <hr>
+                  <p style="font-size: 15px;" class="card-text mt-1">Description: {{ eachBook.description }}</p>
+                  
+                  
+              </div>
+          </div>
+      </div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
